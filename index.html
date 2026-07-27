@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manar ❤ Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Login page extra styles */
+        .login-card {
+            max-width: 420px;
+            width: 100%;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .login-card .logo-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            display: block;
+            animation: pulse 2s infinite;
+        }
+
+        .login-card h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(201, 169, 110, 0.3);
+        }
+
+        .login-card .subtitle {
+            font-size: 0.95rem;
+            color: var(--pink);
+            opacity: 0.7;
+            margin-bottom: 35px;
+        }
+
+        .login-card .form-group {
+            margin-bottom: 25px;
+        }
+
+        .login-card .input-field {
+            text-align: center;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            padding: 18px 25px;
+        }
+
+        .login-card .input-field::placeholder {
+            letter-spacing: normal;
+            font-size: 0.9rem;
+        }
+
+        .login-card .btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.3rem;
+        }
+
+        .login-card .error-msg {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            min-height: 30px;
+            opacity: 0;
+            transition: all 0.4s ease;
+            font-weight: 600;
+        }
+
+        .login-card .error-msg.show {
+            opacity: 1;
+        }
+
+        .login-card .hint {
+            font-size: 0.8rem;
+            color: rgba(255, 245, 245, 0.3);
+            margin-top: 25px;
+            letter-spacing: 1px;
+        }
+
+        .login-card .romantic-decoration {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            color: var(--gold);
+            opacity: 0.4;
+        }
+
+        .login-card .romantic-decoration span {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .login-card .romantic-decoration span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        .login-card .romantic-decoration span:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 35px 20px;
+            }
+            .login-card h1 {
+                font-size: 1.3rem;
+            }
+            .login-card .btn {
+                font-size: 1.1rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Falling Hearts Background -->
+    <div id="hearts-container"></div>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition"></div>
+
+    <!-- Login Card -->
+    <div class="page-container">
+        <div class="login-card glass-card">
+            <div class="romantic-decoration">
+                <span>💕</span>
+                <span>💖</span>
+                <span>💕</span>
+            </div>
+            
+            <div class="logo-icon">🌹</div>
+            
+            <h1>كلمة السر يا روح قلب محمد</h1>
+            <p class="subtitle">اكتبي كلمة السر عشان تدخلي لعالمنا</p>
+
+            <form id="login-form" class="form-group">
+                <input 
+                    type="password" 
+                    id="password-input" 
+                    class="input-field" 
+                    placeholder="اكتبي كلمة السر هنا..."
+                    autocomplete="off"
+                    autocorrect="off"
+                    spellcheck="false"
+                >
+            </form>
+
+            <button id="login-btn" class="btn">
+                💫 دخول
+            </button>
+
+            <div id="login-error" class="error-msg"></div>
+
+            <div class="hint">💌 كل حاجة جميلة مستنياكي ✨</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manar ❤ قصتنا</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Main page extra styles */
+        .main-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 30px;
+        }
+
+        .main-header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold-light);
+            text-shadow: 0 0 30px rgba(201, 169, 110, 0.3);
+        }
+
+        .main-header p {
+            font-size: 1.1rem;
+            color: var(--pink);
+            opacity: 0.7;
+            margin-top: 8px;
+        }
+
+        .main-header .header-hearts {
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section-spacer {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.2), transparent);
+            margin: 50px auto;
+            max-width: 300px;
+        }
+
+        .footer-love {
+            text-align: center;
+            padding: 30px 0 50px;
+            color: rgba(255, 245, 245, 0.3);
+            font-size: 0.9rem;
+        }
+
+        .footer-love span {
+            color: var(--gold);
+            opacity: 0.5;
+        }
+
+        /* Fix for the gallery to vertically center images */
+        .gallery-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            min-height: 500px;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-empty {
+            text-align: center;
+            padding: 80px 30px;
+            color: rgba(255, 245, 245, 0.4);
+        }
+
+        .gallery-empty .icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .gallery-empty p {
+            font-size: 1.1rem;
+            font-family: var(--font-poem);
+        }
+
+        @media (max-width: 768px) {
+            .main-header h1 {
+                font-size: 1.8rem;
+            }
+            .gallery-slide {
+                min-height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-header h1 {
+                font-size: 1.4rem;
+            }
+            .gallery-slide {
+                min-height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Falling Hearts Background -->
+    <div id="hearts-container"></div>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition"></div>
+
+    <!-- Main Content -->
+    <div class="page-container main-page">
+
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-hearts">💕 💖 💕</div>
+            <h1>🌹 راوي قصتنا يا منار 🌹</h1>
+            <p>كل لحظة معاكي حكاية حب مش بتخلص 💫</p>
+        </header>
+
+        <!-- SECTION 1: Audio Player -->
+        <section class="main-section">
+            <h2 class="section-title">🎵 اغنية حبيبتي ملاك - عمرو دياب 🎵</h2>
+            <div class="audio-player glass-card">
+                <!-- Audio File Placeholder -->
+                <audio id="bg-audio" loop preload="auto">
+                    <source src="Albumaty.Com_amrw_dyab_hbیbty_mlak.mp3" type="audio/mpeg">
+                    متصفحك لا يدعم تشغيل الصوت 🎧
+                </audio>
+
+                <div class="audio-art">
+                    💿
+                </div>
+
+                <h3 class="audio-title">اغنية حبيبتي ملاك - عمرو دياب</h3>
+                <p class="audio-artist">— ليكي أنتي بس يا منار —</p>
+
+                <div class="audio-controls">
+                    <button id="audio-play" class="audio-btn" title="تشغيل / إيقاف">▶</button>
+                    <button id="audio-mute" class="audio-btn" title="كتم الصوت">🔊</button>
+                </div>
+
+                <div id="audio-progress" class="audio-progress">
+                    <div id="audio-progress-fill" class="audio-progress-fill"></div>
+                </div>
+
+                <div class="audio-time">
+                    <span id="audio-current">0:00</span>
+                    <span id="audio-duration">0:00</span>
+                </div>
+
+                <p style="font-size: 0.75rem; color: rgba(255,245,245,0.25); margin-top: 20px;">
+                   <audio src="audio\Albumaty.Com_amrw_dyab_hbیbty_mlak.mp3"></audio>
+                </p>
+            </div>
+        </section>
+
+        <div class="section-spacer"></div>
+
+        <!-- SECTION 2: Photo Gallery -->
+      
+
+            <div id="gallery-dots" class="gallery-dots"></div>
+        </section>
+
+        <div class="section-spacer"></div>
+
+        <!-- SECTION 3: Poem -->
+        <section class="main-section">
+            <h2 class="section-title">📜 قصيدة حب 📜</h2>
+            <div class="poem-container">
+                <h3 class="poem-title">إلى منار 💕</h3>
+                
+                <div class="poem-decoration">✦ ✦ ✦</div>
+                
+                <div class="poem-text">
+                    <!-- 📝 PLACEHOLDER: ضعي قصيدتك هنا -->
+                    <div class="poem-placeholder">
+                        هنا تكتب قصيدتك الرومانسية 💌<br><br>
+                        مثلاً:<br>
+            يا مَنارُ، يا نَبضًا تهادى في دمي
+وسكنَ الفؤادَ فأزهرتْ أيّامي<br>
+                       ما كنتُ أدري أنَّ للحبِّ موطنًا
+حتى رأيتُكِ موطنَ الأحلامِ<br>
+                       إنْ غِبتِ، ضاقَ الكونُ رغمَ اتِّساعِهِ
+وأتى المساءُ مثقلًا بظلامِ<br>
+                                               فإذا سألتِ: لِمَ اخترتُكِ؟ قلتُ إنَّني
+وجدتُ فيكِ سكينةَ الأرواحِ
+
+يا مَنارُ، إنَّ القلبَ ليسَ بغيرِكِ
+يرضى، ولا يهوى سواكِ دوامًا
+
+فإنْ كتبَ الرحمنُ أن نجتمعَ يومًا
+جعلتُكِ أجملَ دعوةٍ في ختامِ<br>
+
+                                                                      
+
+                        وروحك عايشة في خيالي 🌹
+                    </div>
+                </div>
+
+                <div class="poem-decoration">✦ ✦ ✦</div>
+
+                <p style="font-size: 0.8rem; color: rgba(255,245,245,0.25); margin-top: 20px;">
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-love">
+            <span>❤</span> صنع بحب لمنار <span>❤</span>
+            <br>
+            <span style="font-size: 0.7rem;">من حبيبك </span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
